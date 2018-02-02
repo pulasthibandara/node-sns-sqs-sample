@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Id": "arn:aws:sqs:ap-southeast-2:839863224732:worker-a/SQSDefaultPolicy",
+  "Statement": [
+    {
+      "Sid": "Sid1517541730141",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "SQS:SendMessage",
+      "Resource": "arn:aws:sqs:ap-southeast-2:839863224732:worker-a",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "arn:aws:sns:ap-southeast-2:839863224732:test-topic"
+        }
+      }
+    }
+  ]
+}
